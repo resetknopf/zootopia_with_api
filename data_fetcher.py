@@ -1,8 +1,11 @@
 import requests
+import os
+from dotenv import load_dotenv
 from typing import Any, Dict, List
 
-API_KEY = 'BHcPDHME/P3NrjiGFSXVzA==BdVL2dPvUZZBI54H'
 
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
 
 
 def fetch_data(animal_name: str) -> List[Dict[str, Any]]:
